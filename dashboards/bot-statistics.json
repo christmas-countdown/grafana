@@ -25,14 +25,6 @@
       "pluginName": "JSON API"
     },
     {
-      "name": "DS_STATCORD_AGGREGATED: CHRISTMAS COUNTDOWN",
-      "label": "Statcord Aggregated: Christmas Countdown",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "marcusolsson-json-datasource",
-      "pluginName": "JSON API"
-    },
-    {
       "name": "VAR_BOT_ID",
       "type": "constant",
       "label": "Bot ID",
@@ -108,7 +100,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1635202396872,
+  "iteration": 1635253928146,
   "links": [
     {
       "asDropdown": false,
@@ -919,14 +911,14 @@
           "method": "GET",
           "queryParams": "",
           "refId": "A",
-          "urlPath": ""
+          "urlPath": "/$bot_id"
         }
       ],
       "title": "Most popular commands",
       "type": "barchart"
     },
     {
-      "datasource": "${DS_STATCORD_AGGREGATED: CHRISTMAS COUNTDOWN}",
+      "datasource": "${DS_STATCORD:_CHRISTMAS COUNTDOWN}",
       "description": "Starting from October 2021.\nAlmost 140,000 commands were used in 2020 - 50,000 in November with 4,000 on 30/11/2020.",
       "fieldConfig": {
         "defaults": {
@@ -982,7 +974,7 @@
           "method": "GET",
           "queryParams": "",
           "refId": "A",
-          "urlPath": ""
+          "urlPath": "/$bot_id/aggregate"
         }
       ],
       "type": "stat"
@@ -1083,7 +1075,7 @@
           ],
           "queryParams": "",
           "refId": "A",
-          "urlPath": ""
+          "urlPath": "/$bot_id"
         }
       ],
       "title": "Commands used",
@@ -1185,7 +1177,7 @@
           ],
           "queryParams": "",
           "refId": "A",
-          "urlPath": ""
+          "urlPath": "/$bot_id"
         }
       ],
       "title": "Engaged users",
@@ -1287,7 +1279,7 @@
           ],
           "queryParams": "",
           "refId": "A",
-          "urlPath": ""
+          "urlPath": "/$bot_id"
         }
       ],
       "title": "Enabled servers",
@@ -1440,7 +1432,7 @@
           "method": "GET",
           "queryParams": "",
           "refId": "A",
-          "urlPath": ""
+          "urlPath": "/$bot_id"
         }
       ],
       "type": "stat"
@@ -1502,7 +1494,7 @@
           "method": "GET",
           "queryParams": "",
           "refId": "A",
-          "urlPath": ""
+          "urlPath": "/$bot_id"
         }
       ],
       "type": "stat"
@@ -1541,7 +1533,7 @@
       "type": "row"
     },
     {
-      "datasource": "${DS_STATCORD_AGGREGATED: CHRISTMAS COUNTDOWN}",
+      "datasource": "${DS_STATCORD:_CHRISTMAS COUNTDOWN}",
       "description": "Starting from October 2021.\nDoes not include the 204 Top.gg votes from 2020.",
       "fieldConfig": {
         "defaults": {
@@ -1596,7 +1588,7 @@
           "method": "GET",
           "queryParams": "",
           "refId": "A",
-          "urlPath": ""
+          "urlPath": "/$bot_id/aggregate"
         }
       ],
       "title": "Total global votes",
@@ -2523,5 +2515,5 @@
   "timezone": "",
   "title": "Bot: Statistics",
   "uid": "au6Q9Xdnz",
-  "version": 63
+  "version": 64
 }
