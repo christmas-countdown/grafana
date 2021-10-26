@@ -100,7 +100,7 @@
   "gnetId": null,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1635253928146,
+  "iteration": 1635255972471,
   "links": [
     {
       "asDropdown": false,
@@ -1237,12 +1237,12 @@
         "x": 6,
         "y": 20
       },
-      "id": 36,
+      "id": 59,
       "links": [
         {
           "targetBlank": true,
           "title": "Statcord",
-          "url": "https://statcord.com/bot/${bot_id}"
+          "url": ""
         }
       ],
       "options": {
@@ -1500,13 +1500,116 @@
       "type": "stat"
     },
     {
+      "datasource": "${DS_STATCORD:_CHRISTMAS COUNTDOWN}",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "users",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 28
+      },
+      "id": 36,
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Statcord",
+          "url": "https://statcord.com/bot/${bot_id}"
+        }
+      ],
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "hidden",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "fields": [
+            {
+              "jsonPath": "$.data[*].time",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.data[*].custom2",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "days",
+              "90"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/$bot_id"
+        }
+      ],
+      "title": "Countdown messages sent",
+      "type": "timeseries"
+    },
+    {
       "datasource": null,
       "description": "",
       "gridPos": {
         "h": 3,
         "w": 12,
-        "x": 12,
-        "y": 28
+        "x": 0,
+        "y": 31
       },
       "id": 58,
       "options": {
@@ -1525,7 +1628,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 31
+        "y": 38
       },
       "id": 48,
       "panels": [],
@@ -1557,7 +1660,7 @@
         "h": 8,
         "w": 2,
         "x": 0,
-        "y": 32
+        "y": 39
       },
       "id": 22,
       "options": {
@@ -1627,7 +1730,7 @@
         "h": 4,
         "w": 3,
         "x": 2,
-        "y": 32
+        "y": 39
       },
       "id": 51,
       "options": {
@@ -1708,7 +1811,7 @@
         "h": 4,
         "w": 3,
         "x": 5,
-        "y": 32
+        "y": 39
       },
       "id": 46,
       "options": {
@@ -1788,7 +1891,7 @@
         "h": 4,
         "w": 4,
         "x": 8,
-        "y": 32
+        "y": 39
       },
       "id": 45,
       "options": {
@@ -1889,7 +1992,7 @@
         "h": 5,
         "w": 6,
         "x": 12,
-        "y": 32
+        "y": 39
       },
       "id": 54,
       "options": {
@@ -1988,7 +2091,7 @@
         "h": 5,
         "w": 6,
         "x": 18,
-        "y": 32
+        "y": 39
       },
       "id": 55,
       "options": {
@@ -2057,7 +2160,7 @@
         "h": 4,
         "w": 3,
         "x": 2,
-        "y": 36
+        "y": 43
       },
       "id": 10,
       "options": {
@@ -2138,7 +2241,7 @@
         "h": 4,
         "w": 3,
         "x": 5,
-        "y": 36
+        "y": 43
       },
       "id": 50,
       "options": {
@@ -2218,7 +2321,7 @@
         "h": 4,
         "w": 4,
         "x": 8,
-        "y": 36
+        "y": 43
       },
       "id": 49,
       "options": {
@@ -2319,7 +2422,7 @@
         "h": 7,
         "w": 6,
         "x": 12,
-        "y": 37
+        "y": 44
       },
       "id": 53,
       "options": {
@@ -2419,7 +2522,7 @@
         "h": 7,
         "w": 6,
         "x": 18,
-        "y": 37
+        "y": 44
       },
       "id": 56,
       "options": {
@@ -2515,5 +2618,5 @@
   "timezone": "",
   "title": "Bot: Statistics",
   "uid": "au6Q9Xdnz",
-  "version": 64
+  "version": 66
 }
